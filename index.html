@@ -49,6 +49,12 @@
             padding: 0 20px 0 20px;
         }
 
+        header ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
         header ul li a:hover {
             color: #048a93;
         }
@@ -74,7 +80,7 @@
 
         section {
             padding: 20px;
-            margin: 10px 0;
+            margin: 20px 0;
             background: #1f1f1f;
             border: #333 1px solid;
             border-radius: 10px;
@@ -124,7 +130,7 @@
         section#projects ul,
         section#experience ul {
             padding-left: 20px;
-            margin: 5px 0;
+            margin: 10px 0;
         }
 
         section#projects ul li {
@@ -148,6 +154,108 @@
             float: right;
             color: #999;
         }
+
+        /* Drawer for mobile navigation */
+        .drawer {
+            position: fixed;
+            top: 0;
+            right: -200px;
+            width: 200px;
+            height: 100%;
+            background-color: #333;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            z-index: 1000;
+            padding-top: 70px;
+        }
+
+        .drawer.open {
+            transform: translateX(0);
+        }
+
+        .drawer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .drawer ul li {
+            padding: 15px;
+        }
+
+        .drawer ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .drawer ul li a:hover {
+            color: #0faab5;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding-right: 20px;
+            }
+
+            header ul {
+                display: none;
+            }
+
+            header #branding h1 a {
+                font-size: 30px;
+                margin: 18px;
+            }
+
+            .menu-toggle {
+                display: block;
+                cursor: pointer;
+                font-size: 24px;
+                position: absolute;
+                right: 20px;
+            }
+
+            .container {
+                width: 100%;
+            }
+
+            section {
+                margin: 10px 15px;
+                padding: 15px 20px;
+            }
+
+            section#projects ul,
+            section#experience ul {
+                margin: 10px 0;
+                padding-left: 10px;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            .drawer {
+                right: 0;
+                transform: translateX(100%);
+            }
+
+            .dates {
+                display: none;
+            }
+
+            section#skills p ul li {
+                margin: 15px;
+            }
+        }
     </style>
 </head>
 
@@ -168,8 +276,20 @@
                     <li><a href="#assignments">Assignments</a></li>
                 </ul>
             </nav>
+            <div class="menu-toggle">&#9776;</div>
         </div>
     </header>
+
+    <div class="drawer">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#assignments">Assignments</a></li>
+        </ul>
+    </div>
 
     <div class="container">
         <section id="about" class="clearfix">
@@ -186,15 +306,15 @@
                 <li>
                     <strong>Students' Placement Office, IITK</strong>
                     <ul>
-                        <li>Web Head<span>April'24 - Present</span></li>
-                        <li>Web Executive<span>May'23 - March'24</span></li>
+                        <li>Web Head<span class="dates">April'24 - Present</span></li>
+                        <li>Web Executive<span class="dates">May'23 - March'24</span></li>
                     </ul>
                 </li>
                 <li>
                     <strong>Antaragni, IITK</strong>
                     <ul>
-                        <li>Head, Web & App<span>April'24 - Present</span></li>
-                        <li>Organiser, Web & App<span>June'23 - March'24</span></li>
+                        <li>Head, Web & App<span class="dates">April'24 - Present</span></li>
+                        <li>Organiser, Web & App<span class="dates">June'23 - March'24</span></li>
                     </ul>
                 </li>
             </ul>
@@ -222,30 +342,38 @@
                         Missing People</a>, Mentors: Prof. T.K. Guha, AE, IITK & Prof. Soumya Dutta, CSE,
                     IITK<span>Jan'24 -
                         Present</span>
-                    <br />Develop an innovative portal to combat human trafficking in India, with the support of 3
-                    esteemed professors. Establishing IITK as the leading hub, for leveraging technology to solve
-                    problems related to human trafficking
+                    <br />
+                    <p>Developing an innovative portal to combat human trafficking in India, with the support of 3
+                        esteemed professors. Establishing IITK as the leading hub, for leveraging technology to solve
+                        problems related to human trafficking.
+                        <p />
                 </li>
                 <li><a href="https://github.com/pclubiitk/IITK-Mail-Client" target="_blank">IITK Mail Client</a>,
                     Mentoring, PClub IITK<span>May'24 -
                         Present</span>
-                    <br />Developing a Mail Client for the IITK campus community from scratch for all platforms
-                    including Android, IOS, Mac, Linux, Windows and Web. Mentoring and guiding 15 mentees to build their
-                    own mail client using flutter.
+                    <br />
+                    <p>Developing a Mail Client for the IITK campus community from scratch for all platforms
+                        including Android, IOS, Mac, Linux, Windows and Web. Mentoring and guiding 15 mentees to build
+                        their
+                        own mail client using flutter.</p>
                 </li>
                 <li><a href="" target="_blank">Intro to Generative AI</a>, GDSC IITK<span>Dec'23 -
                         Jan'24</span>
-                    <br />Learned generative AI fundamentals, explored Large Language Models (LLMs), and transformer
-                    architectures,
-                    focusing on models like BERT for natural language processing tasks. Learned Generative Adversarial
-                    Networks (GANs), learning the intricacies of Generators and Discriminators. Imple-
-                    mented LLMs in applications using transformers and frameworks like embedchain
+                    <br />
+                    <p>Learned generative AI fundamentals, explored Large Language Models (LLMs), and transformer
+                        architectures,
+                        focusing on models like BERT for natural language processing tasks. Learned Generative
+                        Adversarial
+                        Networks (GANs), learning the intricacies of Generators and Discriminators. Imple-
+                        mented LLMs in applications using transformers and frameworks like embedchain.</p>
                 </li>
                 <li><a href="" target="_blank">Campus Fora</a>, PClub IITK<span>Apr'23 - Jul'23</span>
-                    <br />Developing a Stack Exchange-inspired website for the IITK campus community to efficiently
-                    address campus-related
-                    doubts and issues. Acquired knowledge in advanced frameworks and technologies, including Next.js,
-                    GoLang, and PostgreSQL.
+                    <br />
+                    <p>Developing a Stack Exchange-inspired website for the IITK campus community to efficiently
+                        address campus-related
+                        doubts and issues. Acquired knowledge in advanced frameworks and technologies, including
+                        Next.js,
+                        GoLang, and PostgreSQL.</p>
                 </li>
             </ul>
         </section>
@@ -253,11 +381,13 @@
         <section id="skills">
             <h2>Skills</h2>
             <p>
-                <li>Programming Languages: Java, C, C++, Python, JavaScript, TypeScript, Golang, Dart, LATEX</li>
-                <li>Frameworks and Libraries: React.js, Next.js, Streamlit, Django, Flutter, Numpy, Pandas, Matplotlib
-                </li>
-                <li>Tools and Utilities: Git, Github, HTML5, CSS3, Firebase, PostgreSQL, MongoDB, Docker, Nginx, Figma
-                </li>
+            <ul>
+                <li>Programming Languages: Java, C, C++, Python, JavaScript, TypeScript, Golang, Dart, LATEX<br /></li>
+                <li>Frameworks and Libraries: React.js, Next.js, Streamlit, Django, Flutter, Numpy, Pandas,
+                    Matplotlib<br /></li>
+                <li>Tools and Utilities: Git, Github, HTML5, CSS3, Firebase, PostgreSQL, MongoDB, Docker, Nginx,
+                    Figma<br /></li>
+            </ul>
             </p>
         </section>
 
@@ -274,6 +404,22 @@
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Toggle drawer open/close on menu button click
+        const menuToggle = document.querySelector('.menu-toggle');
+        const drawer = document.querySelector('.drawer');
+
+        menuToggle.addEventListener('click', () => {
+            drawer.classList.toggle('open');
+        });
+
+        // Close drawer when a link is clicked (for smoother navigation on mobile)
+        const drawerLinks = document.querySelectorAll('.drawer ul li a');
+        drawerLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                drawer.classList.remove('open');
+            });
+        });
     </script>
 </body>
 
