@@ -5,10 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="dp.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b419229a7f.js" crossorigin="anonymous"></script>
     <title>Yash Chauhan</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Noto Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -155,6 +165,12 @@
             color: #999;
         }
 
+        #msg {
+            color: #06d1e0;
+            margin-left: 22%;
+            font-size: 20px;
+        }
+
         /* Drawer for mobile navigation */
         .drawer {
             position: fixed;
@@ -255,8 +271,92 @@
             section#skills p ul li {
                 margin: 15px;
             }
+
             .datess {
                 margin: 0px 5px;
+            }
+        }
+
+        /* New CSS for Contact Section */
+        .contactrow {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .contactleft,
+        .contactright {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            background: #1f1f1f;
+            border-radius: 10px;
+        }
+
+
+        .contactleft p a {
+            color: #0faab5;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .contactleft p a:hover {
+            color: #048a93;
+        }
+
+        .socialicons a {
+            margin: 0 10px;
+            color: #0faab5;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .socialicons a:hover {
+            color: #048a93;
+        }
+
+        .contactright form div {
+            margin-bottom: 10px;
+        }
+
+        .contactright form input[type="text"],
+        .contactright form input[type="email"],
+        .contactright form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background: #333;
+            color: #fff;
+        }
+
+        .contactright form button.btn {
+            background: #048a93;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contactright form button.btn:hover {
+            background: #333;
+        }
+
+        .contactright form span#msg {
+            color: #0faab5;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .contactrow {
+                flex-direction: column;
+            }
+
+            .contactleft,
+            .contactright {
+                margin: 10px 0;
             }
         }
     </style>
@@ -277,6 +377,7 @@
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#assignments">Assignments</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="menu-toggle">&#9776;</div>
@@ -291,6 +392,7 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#assignments">Assignments</a></li>
+            <li><a href="#contact">Assignments</a></li>
         </ul>
     </div>
 
@@ -396,8 +498,56 @@
 
         <section id="assignments">
             <h2>Assignment Submission</h2>
-            <p>You can download my CS771 Assignment 1 from the link below:</p>
+            <p>Our group's CS771 assignment-1 can be downloaded from here:</p>
             <a href="path_to_cs771_assignment1.zip" class="button">Download Assignment 1</a>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contactrow">
+                    <div class="contactleft">
+                        <h1 class="subtitle">Contact</h1>
+                        <!-- <p><a href="https://github.com/yashlm" target="_blank"><i
+                                    class="fa-brands fa-github"></i> yashlm</a></p>
+                        <p><a href="https://www.linkedin.com/in/yash-chauhan-879b98211/" target="_blank"><i
+                                    class="fa-brands fa-linkedin"></i> yash-chauhan-879b98211</a></p>
+                        <p><a href="https://twitter.com/YashCha26096669" target="_blank"><i
+                                    class="fa-brands fa-twitter"></i> YashCha26096669</a></p> -->
+                        <p><a href="mailto:yashlm1017@gmail.com"><i class="fa-solid fa-envelope"></i>
+                                yashlm1017@gmail.com</a></p>
+                        <p><a href="mailto:yashc22@iitk.ac.in"><i class="fa-solid fa-envelope"></i>
+                                yashc22@iitk.ac.in</a></p>
+                        <div class="socialicons">
+                            <a href="https://github.com/yashlm" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/yash-chauhan-10b696250" target="_blank"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/_yashh_.h/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100006151927034" target="_blank"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                            <a href="https://x.com/Yash20_lm" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                            <!-- <a href="mailto:yashlm1017@gmail.com"><i class="fa-solid fa-envelope"></i></a> -->
+                        </div>
+                    </div>
+                    <div class="contactright">
+                        <form action="chillhai" method="POST" name="submit-to-google-sheet">
+                            <div>
+                                <label for="name">Name</label><br>
+                                <input type="text" name="Name" id="name" required>
+                            </div>
+                            <div>
+                                <label for="email">Email</label><br>
+                                <input type="email" name="Email" id="email" required>
+                            </div>
+                            <div>
+                                <label for="message">Message</label><br>
+                                <textarea name="Message" id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Submit</button>
+                            <span id="msg"></span>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 
@@ -423,6 +573,25 @@
                 drawer.classList.remove('open');
             });
         });
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx-tZn8RAeH68Z6oeOs2knhMn8R20rpN6VpNvjDXdqo_QtHPMWeSkZU3MS3gfoXrYIb_g/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message has been sent!"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
     </script>
 </body>
 
