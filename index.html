@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="dp.jpg" />
+    <title>Yash Chauhan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #1f1f1f;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #087279 3px solid;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        header ul li {
+            float: right;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+
+        header ul li a:hover {
+            color: #048a93;
+        }
+
+        header #branding {
+            float: left;
+        }
+
+        header #branding h1 {
+            margin: 0;
+        }
+
+        header #branding h1 a {
+            color: #0faab5;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 30px;
+        }
+
+        header #branding h1 a:hover {
+            color: #0faab5;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px 0;
+            background: #1f1f1f;
+            border: #333 1px solid;
+            border-radius: 10px;
+        }
+
+        footer {
+            background: #1f1f1f;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background: #048a93;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background: #333;
+        }
+
+        .profile-image {
+            float: left;
+            margin-right: 20px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            border: 2px solid #087279;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Custom styling for project and experience lists */
+        section#projects ul,
+        section#experience ul {
+            padding-left: 20px;
+            margin: 5px 0;
+        }
+
+        section#projects ul li {
+            margin-bottom: 20px;
+        }
+
+        section#projects ul li a,
+        section#experience ul li a {
+            color: #0faab5;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        section#projects ul li a:hover,
+        section#experience ul li a:hover {
+            color: #048a93;
+        }
+
+        section#projects ul li span,
+        section#experience ul li span {
+            float: right;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><a href="https://www.youtube.com/watch?v=AlnHNi0hdO0" target="_blank"><span>Yash Chauhan</span></a>
+                </h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#interests">Interests</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#assignments">Assignments</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="about" class="clearfix">
+            <img src="dp.jpg" alt="Yash Chauhan" class="profile-image">
+            <h2>About Me</h2>
+            <p>I am a pre-final year undergraduate student at IIT Kanpur, pursuing my bachelors in the Biological
+                Sciences and Bioengineering department (BT-BSBE). My focus lies in exploring technology, particularly
+                dev ops, data science and deep learning.</p>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <ul>
+                <li>
+                    <strong>Students' Placement Office, IITK</strong>
+                    <ul>
+                        <li>Web Head<span>April'24 - Present</span></li>
+                        <li>Web Executive<span>May'23 - March'24</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Antaragni, IITK</strong>
+                    <ul>
+                        <li>Head, Web & App<span>April'24 - Present</span></li>
+                        <li>Organiser, Web & App<span>June'23 - March'24</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="interests">
+            <h2>Interests</h2>
+            <p>I've great interest in data science and DevOps. My experience in web development has allowed me to
+                develop proficiency in various frameworks and technologies. I've keen interest in physics as well,
+                particularly quantum mechanics and astrophysics.<br /><br />
+
+                I'm really passionate about sports, particularly football, cricket and F1. I find joy in the strategic
+                aspects of these sports. Besides, I am an ardent supporter of FC Barcelona and Argentina.
+
+                I am also fascinated by international relations and enjoy exploring global dynamics and diplomacy. I
+                also have a deep appreciation for rock and metal music, particularly bands like Linkin Park, Nirvana,
+                Metallica, AM and Radiohead.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="https://github.com/TalaashPortal" target="_blank">Smart Search and Identification of
+                        Missing People</a>, Mentors: Prof. T.K. Guha, AE, IITK & Prof. Soumya Dutta, CSE,
+                    IITK<span>Jan'24 -
+                        Present</span>
+                    <br />Develop an innovative portal to combat human trafficking in India, with the support of 3
+                    esteemed professors. Establishing IITK as the leading hub, for leveraging technology to solve
+                    problems related to human trafficking
+                </li>
+                <li><a href="https://github.com/pclubiitk/IITK-Mail-Client" target="_blank">IITK Mail Client</a>,
+                    Mentoring, PClub IITK<span>May'24 -
+                        Present</span>
+                    <br />Developing a Mail Client for the IITK campus community from scratch for all platforms
+                    including Android, IOS, Mac, Linux, Windows and Web. Mentoring and guiding 15 mentees to build their
+                    own mail client using flutter.
+                </li>
+                <li><a href="" target="_blank">Intro to Generative AI</a>, GDSC IITK<span>Dec'23 -
+                        Jan'24</span>
+                    <br />Learned generative AI fundamentals, explored Large Language Models (LLMs), and transformer
+                    architectures,
+                    focusing on models like BERT for natural language processing tasks. Learned Generative Adversarial
+                    Networks (GANs), learning the intricacies of Generators and Discriminators. Imple-
+                    mented LLMs in applications using transformers and frameworks like embedchain
+                </li>
+                <li><a href="" target="_blank">Campus Fora</a>, PClub IITK<span>Apr'23 - Jul'23</span>
+                    <br />Developing a Stack Exchange-inspired website for the IITK campus community to efficiently
+                    address campus-related
+                    doubts and issues. Acquired knowledge in advanced frameworks and technologies, including Next.js,
+                    GoLang, and PostgreSQL.
+                </li>
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <p>
+                <li>Programming Languages: Java, C, C++, Python, JavaScript, TypeScript, Golang, Dart, LATEX</li>
+                <li>Frameworks and Libraries: React.js, Next.js, Streamlit, Django, Flutter, Numpy, Pandas, Matplotlib
+                </li>
+                <li>Tools and Utilities: Git, Github, HTML5, CSS3, Firebase, PostgreSQL, MongoDB, Docker, Nginx, Figma
+                </li>
+            </p>
+        </section>
+
+        <section id="assignments">
+            <h2>Assignment Submission</h2>
+            <p>You can download my CS771 Assignment 1 from the link below:</p>
+            <a href="path_to_cs771_assignment1.zip" class="button">Download Assignment 1</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>Yash Chauhan<br />&copy; <span id="year"></span> | All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
